@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raízes do Nordeste</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🫓%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Peça tapiocas, cuscuz e cafés da manhã nordestinos na unidade mais perto de você.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#app" data-act="pular">Ir para o conteúdo</a>
+<header class="topo">
+  <div class="bandeirinhas" aria-hidden="true"></div>
+  <div class="topo-in">
+    <a class="marca" href="#/cardapio"><i class="sol" aria-hidden="true"></i><b>Raízes<span>do Nordeste</span></b></a>
+    <label class="sel">Unidade
+      <select id="unidade"></select>
+    </label>
+  </div>
+</header>
+<div id="offline" class="offline" role="status" hidden>Sem conexão. Você ainda vê o cardápio, mas pedidos e pagamentos ficam bloqueados até a internet voltar.</div>
+<div id="consent" class="consent" role="dialog" aria-labelledby="c-t" hidden>
+  <h2 id="c-t">Seus dados, suas escolhas</h2>
+  <p>Usamos dados essenciais para seu pedido funcionar. Pontos e ofertas personalizadas só com a sua permissão, e você pode mudar de ideia quando quiser na <a href="#/privacidade">Central de privacidade</a>.</p>
+  <div class="acoes">
+    <button data-act="consent-min" class="btn sec">Só o essencial</button>
+    <a class="btn sec" href="#/privacidade">Personalizar</a>
+    <button data-act="consent-all" class="btn">Aceitar todos</button>
+  </div>
+</div>
+<nav class="nav" aria-label="Principal"></nav>
+<main id="app" tabindex="-1"></main>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
