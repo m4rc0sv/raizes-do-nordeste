@@ -73,7 +73,7 @@ for (const [rotulo, largura, esquema] of [['celular claro', 360, 'light'], ['cel
   });
 }
 
-test('teclado e leitor de tela: pular para o conteúdo, foco após navegar, título e erros ligados aos campos', async () => {
+test('teclado: pular para o conteúdo, foco após navegar, título e erros ligados aos campos', async () => {
   const ctx = await navegador.newContext({ viewport: { width: 390, height: 800 } }); const p = await ctx.newPage(); await p.goto(base);
   await p.keyboard.press('Tab'); assert.equal(await p.evaluate(() => document.activeElement.className), 'skip');
   await p.keyboard.press('Enter'); assert.equal(await p.evaluate(() => document.activeElement.id), 'app'); assert.ok(!(await p.evaluate(() => location.hash)).includes('app'));
